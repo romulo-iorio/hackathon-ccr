@@ -55,3 +55,6 @@ div#modal button#installButton {
     width: 24px;
     background: url('./../img/iconInstallPWA.svg') center center no-repeat
 }
+div#modal button#installButton.hidden {
+    display: none;
+}

@@ -8,14 +8,14 @@ window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 // CODELAB: Add code to save event & show the install button.
 function saveBeforeInstallPromptEvent(evt) {
     deferredInstallPrompt = evt;
-    installButton.removeAttribute('hidden');
+    installButton.classList.remove('hidden');
 }
 
 function installPWA(evt) {
     // CODELAB: Add code show install prompt & hide the install button.
     deferredInstallPrompt.prompt();
     // Hide the install button, it can't be called twice.
-    evt.target.setAttribute('hidden', true);
+    evt.target.classList.add('hidden');
     // CODELAB: Log user response to prompt.
     deferredInstallPrompt.userChoice
         .then((choice) => {
