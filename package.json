@@ -1,0 +1,17 @@
+{
+  "name": "TesteMapas",
+  "version": "1.0.0",
+  "description": "site para testes",
+  "author": "Rômulo Iorio",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "4.x.x",
+    "cors": "^2.8.5",
+    "knex": "^0.21.1",
+    "sqlite": "^4.0.10",
+    "sqlite3": "^4.2.0"
+  }
+}
