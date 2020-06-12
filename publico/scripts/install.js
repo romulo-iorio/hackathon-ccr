@@ -1,5 +1,6 @@
 // CODELAB: Add event listener for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
+installButton = document.getElementById("installButton");
 
 // CODELAB: Add code to save event & show the install button.
 function saveBeforeInstallPromptEvent(evt) {
