@@ -9,7 +9,14 @@ window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 function saveBeforeInstallPromptEvent(evt) {
     deferredInstallPrompt = evt;
     installButton.removeAttribute('hidden');
+}
 
+function installPWA(evt) {
+    // CODELAB: Add code show install prompt & hide the install button.
+    deferredInstallPrompt.prompt();
+    // Hide the install button, it can't be called twice.
+    evt.target.setAttribute('hidden', true);
+    // CODELAB: Log user response to prompt.
     deferredInstallPrompt.userChoice
         .then((choice) => {
             if (choice.outcome === 'accepted') {
@@ -19,14 +26,6 @@ function saveBeforeInstallPromptEvent(evt) {
             }
             deferredInstallPrompt = null;
         });
-}
-
-function installPWA(evt) {
-    // CODELAB: Add code show install prompt & hide the install button.
-    deferredInstallPrompt.prompt();
-    // Hide the install button, it can't be called twice.
-    evt.target.setAttribute('hidden', true);
-    // CODELAB: Log user response to prompt.
 }
 
 // CODELAB: Add event listener for appinstalled event
