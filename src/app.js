@@ -9,7 +9,7 @@ var port = 3000;
 var app = express();
 
 nunjucks.configure("public/views", {       //Utilizando template engine
-    express: server,
+    express: app,
     noCache: true
 })
 app.use(cors());
