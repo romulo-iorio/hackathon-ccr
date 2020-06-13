@@ -8,13 +8,15 @@ class CaminhoneiroController {
                 cpf         INTEGER PRIMARY KEY,
                 image       TEXT,
                 name        TEXT,
-                email       TEXT, FOREIGN KEY (email) REFERENCES login(email), 
+                email       TEXT, 
                 rg          INTEGER,
                 idade       INTEGER,
                 genero      CHAR,
-                docCarro    TEXT, FOREIGN KEY (docCarro) REFERENCES caminhao(docCarro),
+                docCarro    TEXT,
                 numViagens  INTEGER,
                 avaliacao   INTEGER,
+                FOREIGN KEY(email) REFERENCES login(email),
+                FOREIGN KEY(docCarro) REFERENCES caminhao(docCarro),
             );
         `)
     }
