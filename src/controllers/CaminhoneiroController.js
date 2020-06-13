@@ -2,8 +2,8 @@ const { Request, Response } = require("express");
 const db = require("../database/db.js");
 const fs = require('fs');
 
-const CaminhoneiroControllerCreateDB = fs.readFileSync('./SQL files/CaminhoneiroControllerCreateDB.sql').toString()
-const CaminhoneiroControllerInsert = fs.readFileSync('./SQL files/CaminhoneiroControllerInsert.sql').toString()
+const CaminhoneiroControllerCreateDB = fs.readFileSync('/SQL files/CaminhoneiroControllerCreateDB.sql').toString()
+const CaminhoneiroControllerInsert = fs.readFileSync('/SQL files/CaminhoneiroControllerInsert.sql').toString()
 
 db.run('PRAGMA foreign_keys=ON;');
 

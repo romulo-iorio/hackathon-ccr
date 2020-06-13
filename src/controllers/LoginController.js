@@ -2,8 +2,8 @@ const { Request, Response } = require("express");
 const db = require("../database/db.js");
 const fs = require('fs');
 
-const LoginControllerCreateDB = fs.readFileSync('./SQL files/LoginControllerCreateDB.sql').toString()
-const LoginControllerInsert = fs.readFileSync('./SQL files/LoginControllerInsert.sql').toString()
+const LoginControllerCreateDB = fs.readFileSync('/SQL files/LoginControllerCreateDB.sql').toString()
+const LoginControllerInsert = fs.readFileSync('/SQL files/LoginControllerInsert.sql').toString()
 
 class LoginController {
     createDb() {
