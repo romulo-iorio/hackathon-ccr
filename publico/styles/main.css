@@ -58,3 +58,14 @@ div#modal button#installButton {
 .hidden {
     display: none;
 }
+
+button#navigate {
+    width: auto;
+    height: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: teal;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
