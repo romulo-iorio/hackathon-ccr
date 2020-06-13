@@ -3,8 +3,8 @@ const db = require("../database/db.js");
 const fs = require('fs');
 const path = require('path');
 
-const LoginCreateDB = fs.readFileSync(path.resolve(__dirname + '/SQL files/LoginCreateDB.sql')).toString()
-const LoginInsert = fs.readFileSync(path.resolve(__dirname + '/SQL files/LoginInsert.sql')).toString()
+const LoginCreateDB = fs.readFileSync(path.resolve(__dirname + '/SQLfiles/LoginCreateDB.sql')).toString()
+const LoginInsert = fs.readFileSync(path.resolve(__dirname + '/SQLfiles/LoginInsert.sql')).toString()
 
 class LoginController {
     createDb() {
