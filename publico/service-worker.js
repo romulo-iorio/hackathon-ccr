@@ -1,4 +1,4 @@
-const preCache = 'precache-13/06 08:58';
+const preCache = 'precache-13/06-09:08';
 const runTime = 'runtime';
 
 const preCacheUrls = [
