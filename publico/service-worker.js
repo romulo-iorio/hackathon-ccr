@@ -1,4 +1,4 @@
-const preCache = 'precache-v11';
+const preCache = 'precache-v13';
 const runTime = 'runtime';
 
 const preCacheUrls = [
