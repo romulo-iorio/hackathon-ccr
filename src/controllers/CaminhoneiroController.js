@@ -2,14 +2,14 @@ const { Request, Response } = require("express");
 const db = require("../database/db.js");
 const fs = require('fs');
 
-const CaminhoneiroControllerCreateDB = fs.readFileSync('/SQL files/CaminhoneiroControllerCreateDB.sql').toString()
-const CaminhoneiroControllerInsert = fs.readFileSync('/SQL files/CaminhoneiroControllerInsert.sql').toString()
+const CaminhoneiroCreateDB = fs.readFileSync('/SQL files/CaminhoneiroCreateDB.sql').toString()
+const CaminhoneiroInsert = fs.readFileSync('/SQL files/CaminhoneiroInsert.sql').toString()
 
 db.run('PRAGMA foreign_keys=ON;');
 
 class CaminhoneiroController {
     createDb() {
-        db.run(CaminhoneiroControllerCreateDB)
+        db.run(CaminhoneiroCreateDB)
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
@@ -39,7 +39,7 @@ class CaminhoneiroController {
             return "saved";
         };
         //Cria o item no db
-        db.run(CaminhoneiroControllerInsert, values, afterInsertData);
+        db.run(CaminhoneiroInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados

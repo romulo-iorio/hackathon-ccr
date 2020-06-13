@@ -2,12 +2,12 @@ const { Request, Response } = require("express");
 const db = require("../database/db.js");
 const fs = require('fs');
 
-const LoginControllerCreateDB = fs.readFileSync('/SQL files/LoginControllerCreateDB.sql').toString()
-const LoginControllerInsert = fs.readFileSync('/SQL files/LoginControllerInsert.sql').toString()
+const LoginCreateDB = fs.readFileSync('/SQL files/LoginCreateDB.sql').toString()
+const LoginInsert = fs.readFileSync('/SQL files/LoginInsert.sql').toString()
 
 class LoginController {
     createDb() {
-        db.run(LoginControllerCreateDB);
+        db.run(LoginCreateDB);
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
@@ -29,7 +29,7 @@ class LoginController {
             return "saved";
         };
         //Cria o item no db
-        db.run(LoginControllerInsert, values, afterInsertData);
+        db.run(LoginInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados

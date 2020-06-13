@@ -2,12 +2,12 @@ const { Request, Response } = require("express");
 const db = require("../database/db.js");
 const fs = require('fs');
 
-const CaminhaoControllerCreateDB = fs.readFileSync('/SQL files/CaminhaoControllerCreateDB.sql').toString()
-const CaminhaoControllerInsert = fs.readFileSync('/SQL files/CaminhaoControllerInsert.sql').toString()
+const CaminhaoCreateDB = fs.readFileSync('SQL files/CaminhaoCreateDB.sql').toString()
+const CaminhaoInsert = fs.readFileSync('SQL files/CaminhaoInsert.sql').toString()
 
 class CaminhaoController {
     createDb() {
-        db.run(CaminhaoControllerCreateDB)
+        db.run(CaminhaoCreateDB)
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
@@ -30,7 +30,7 @@ class CaminhaoController {
             return "saved";
         };
         //Cria o item no db
-        db.run(CaminhaoControllerInsert, values, afterInsertData);
+        db.run(CaminhaoInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados
