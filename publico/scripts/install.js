@@ -5,10 +5,18 @@ installButton.addEventListener('click', installPWA);
 // CODELAB: Add event listener for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
+function isRunningStandalone() {
+    return (window.matchMedia('(display-mode: standalone)').matches);
+}
+
 // CODELAB: Add code to save event & show the install button.
 function saveBeforeInstallPromptEvent(evt) {
     deferredInstallPrompt = evt;
-    installButton.classList.remove('hidden');
+    if(isRunningStandalone()){
+        installButton.classList.add('hidden');
+    }else {
+        installButton.classList.remove('hidden');
+    }
 }
  
 function installPWA(evt) {

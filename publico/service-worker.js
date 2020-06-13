@@ -33,11 +33,13 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
-    }).then(cachesToDelete => {
+    }, err => console.log(`Erro em cache.keys: ${err}`))
+    .then(cachesToDelete => {
       return Promise.all(cachesToDelete.map(cacheToDelete => {
         return caches.delete(cacheToDelete);
       }));
-    }).then(() => self.clients.claim())
+    }, err => console.log(`Erro em cacheNames.filter: ${err}`))
+    .then(() => self.clients.claim(), err => console.log(`Erro em caches.delete: ${err}`))
   );
 });
 
