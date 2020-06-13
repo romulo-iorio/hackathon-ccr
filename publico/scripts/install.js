@@ -9,12 +9,22 @@ function isRunningStandalone() {
     return (window.matchMedia('(display-mode: standalone)').matches);
 }
 
+if(isRunningStandalone()){
+    console.log("App running as standalone.");
+    installButton.classList.add('hidden');
+}else {
+    console.log("App NOT running as standalone.");
+    installButton.classList.remove('hidden');
+}
+
 // CODELAB: Add code to save event & show the install button.
 function saveBeforeInstallPromptEvent(evt) {
     deferredInstallPrompt = evt;
     if(isRunningStandalone()){
+        console.log("App running as standalone.");
         installButton.classList.add('hidden');
     }else {
+        console.log("App NOT running as standalone.");
         installButton.classList.remove('hidden');
     }
 }
