@@ -1,29 +1,17 @@
 const { Request, Response } = require("express");
 const db = require("../database/db.js");
+const fs = require('fs');
+
+const CaminhaoControllerCreateDB = fs.readFileSync('./SQL files/CaminhaoControllerCreateDB.sql').toString()
+const CaminhaoControllerInsert = fs.readFileSync('./SQL files/CaminhaoControllerInsert.sql').toString()
 
 class CaminhaoController {
     createDb() {
-        db.run(`
-            CREATE TABLE IF NOT EXISTS caminhao (
-                docCarro    TEXT PRIMARY KEY,
-                modelo      TEXT,
-                placa       TEXT,
-                cor         TEXT
-            );
-        `)
+        db.run(CaminhaoControllerCreateDB)
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
         //req.body.image = path.resolve(__dirname, '..', '..', 'public', 'uploads', req.file.filename);
-        req.body.image = `/uploads/${req.file.filename}`;
-        const query = `
-            INSERT INTO caminhao (
-                docCarro,
-                modelo,
-                placa,
-                cor
-            ) VALUES (?,?,?,?);    
-        `;  
         const values = [
             req.body.docCarro,
             req.body.modelo,
@@ -42,11 +30,11 @@ class CaminhaoController {
             return "saved";
         };
         //Cria o item no db
-        db.run(query, values, afterInsertData);
+        db.run(CaminhaoControllerInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados
-        db.all(`SELECT * FROM caminhoneiro`, function(err, rows){
+        db.all(`SELECT * FROM caminhao`, function(err, rows){
             if(err){
                 return console.log(err);
             }

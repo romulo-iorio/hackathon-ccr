@@ -1,25 +1,18 @@
 const { Request, Response } = require("express");
 const db = require("../database/db.js");
+const fs = require('fs');
+
+const LoginControllerCreateDB = fs.readFileSync('./SQL files/LoginControllerCreateDB.sql').toString()
+const LoginControllerInsert = fs.readFileSync('./SQL files/LoginControllerInsert.sql').toString()
 
 class LoginController {
     createDb() {
-        db.run(`
-            CREATE TABLE IF NOT EXISTS login (
-                email       TEXT PRIMARY KEY,
-                senha       TEXT
-            );
-        `)
+        db.run(LoginControllerCreateDB);
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
         //req.body.image = path.resolve(__dirname, '..', '..', 'public', 'uploads', req.file.filename);
         req.body.image = `/uploads/${req.file.filename}`;
-        const query = `
-            INSERT INTO login (
-                email,
-                senha
-            ) VALUES (?,?,?,?);    
-        `;  
         const values = [
             req.body.email,
             req.body.senha
@@ -36,7 +29,7 @@ class LoginController {
             return "saved";
         };
         //Cria o item no db
-        db.run(query, values, afterInsertData);
+        db.run(LoginControllerInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados

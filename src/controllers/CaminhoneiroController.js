@@ -1,43 +1,20 @@
 const { Request, Response } = require("express");
 const db = require("../database/db.js");
+const fs = require('fs');
+
+const CaminhoneiroControllerCreateDB = fs.readFileSync('./SQL files/CaminhoneiroControllerCreateDB.sql').toString()
+const CaminhoneiroControllerInsert = fs.readFileSync('./SQL files/CaminhoneiroControllerInsert.sql').toString()
+
+db.run('PRAGMA foreign_keys=ON;');
 
 class CaminhoneiroController {
     createDb() {
-        db.run(`
-            CREATE TABLE IF NOT EXISTS caminhoneiro (
-                cpf         INTEGER PRIMARY KEY,
-                image       TEXT,
-                name        TEXT,
-                email       TEXT, 
-                rg          INTEGER,
-                idade       INTEGER,
-                genero      CHAR,
-                docCarro    TEXT,
-                numViagens  INTEGER,
-                avaliacao   INTEGER,
-                FOREIGN KEY(email) REFERENCES login(email),
-                FOREIGN KEY(docCarro) REFERENCES caminhao(docCarro)
-            );
-        `)
+        db.run(CaminhoneiroControllerCreateDB)
     }
     create(req, res) {
         //Prepara a referência ao diretório da imagem
         //req.body.image = path.resolve(__dirname, '..', '..', 'public', 'uploads', req.file.filename);
         req.body.image = `/uploads/${req.file.filename}`;
-        const query = `
-            INSERT INTO caminhoneiro (
-                cpf,
-                image,
-                name,
-                email,
-                rg,
-                idade,
-                genero,
-                docCarro,
-                numViagens,
-                avaliacao
-            ) VALUES (?,?,?,?,?,?,?,?,?,?);    
-        `;  
         const values = [
             req.body.cpf,
             req.body.image,
@@ -62,7 +39,7 @@ class CaminhoneiroController {
             return "saved";
         };
         //Cria o item no db
-        db.run(query, values, afterInsertData);
+        db.run(CaminhoneiroControllerInsert, values, afterInsertData);
     }
     index(req,res) {
         //Pegar os dados do banco de dados
