@@ -60,12 +60,13 @@ div#modal button#installButton {
 }
 
 button#navigate {
-    width: 100vw;
+    width: 90vw;
     height: 50px;
     border-radius: 10px;
     margin: 10px;
     background-color: teal;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
 }
