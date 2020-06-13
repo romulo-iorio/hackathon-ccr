@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+    <head>
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+        <meta name="description" content="PWA para melhorar a qualidade de vida dos caminhoneiros">
+        <meta name="theme-color" content="#FFFFFF">
+        <title>Caminhonagem</title>
+        <link rel="shortcut icon" href="../img/truck.svg" />
+        <link rel="stylesheet" type="text/css" href="../styles/login.css" />
+        <link rel="manifest" href="../../manifest.json">
+        <link rel="apple-touch-icon" href="../img/truck.svg"/>
+    </head>
+
+    <body>
+        <header>
+            <img src="" alt="Logo do projeto caminhonagem" id="logo">
+        </header>
+
+        <div class="content">
+            <form action="/login" method="POST">
+                <label type="email" for="email" placeholder="Digite seu e-mail">E-mail</label>
+                <input type="text" name="email" required>
+
+                <label for="password" placeholder="Digite a sua senha">Senha</label>
+                <input type="text" name="password" required>
+            </form>
+
+            <button id="send-form">Entrar</button>
+            <button id="forgot-password">Esqueci minha senha</button>
+            <button id="register">Registrar</button>
+
+            <div id="google-login">
+                <p>Entrar com o google</p>
+                <span id="google-icon"></span>
+            </div>
+        </div>
+
+        <footer>
+            <h1>Equipe Caminhonagem, 2020 © Todos os direitos reservados</h1>
+        </footer>
+    </body>     
+    <script src="../scripts/login.js"></script>
+    <script src="../service-worker.js"></script>
+    <!-- CODELAB: Add the install script here -->
+    <script src="../scripts/install.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker
+                .register("../service-worker.js")
+                .then( res => {
+                    console.log(`Service worker registered: ${res}`); 
+                }, err =>{
+                    console.log(`Service worker not registered: ${err}`);
+                });
+        }
+    </script>
+</html>

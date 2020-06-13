@@ -1,15 +1,15 @@
 {
-    "short_name": "Testa Mapa",
-    "name": "Teste da API de mapa do google maps",
-    "description": "Teste da API de mapa do google maps",
+    "short_name": "Caminhonagem",
+    "name": "Caminhonagem: Uma mudança na sua vida",
+    "description": "Site para melhorar a qualidade de vida dos caminhoneiros",
     "icons": [
         {
-            "src": "/img/maps192.png",
+            "src": "/img/truck-192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/img/maps512.png",
+            "src": "/img/truck-512.png",
             "type": "image/png",
             "sizes": "512x512"
         }

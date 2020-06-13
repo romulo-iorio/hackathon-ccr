@@ -4,20 +4,20 @@ const runTime = 'runtime';
 const preCacheUrls = [
     '/',
     // html file
-    './views/index.html',
+    './views/login.html',
     // css file
-    './styles/main.css',
+    './styles/login.css',
     // javascript filter
-    './scripts/index.js',
+    './scripts/login.js',
     './scripts/install.js',
     // manifest file
     './../manifest.json',
     // assets
-    './img/maps.svg',
-    './img/maps192.png',
-    './img/maps512.png',
+    //'./img/maps.svg',
+    //'./img/maps192.png',
+    //'./img/maps512.png',
     // maps api
-    'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyB2twdyhbY-Am2MgyGkWBpHZnTktlw8PJs&callback=initMap',
+    //'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyB2twdyhbY-Am2MgyGkWBpHZnTktlw8PJs&callback=initMap',
 ];
 
 self.addEventListener('install', event => {
