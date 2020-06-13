@@ -16,7 +16,7 @@ class CaminhoneiroController {
                 numViagens  INTEGER,
                 avaliacao   INTEGER,
                 FOREIGN KEY(email) REFERENCES login(email),
-                FOREIGN KEY(docCarro) REFERENCES caminhao(docCarro),
+                FOREIGN KEY(docCarro) REFERENCES caminhao(docCarro)
             );
         `)
     }
