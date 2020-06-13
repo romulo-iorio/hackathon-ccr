@@ -35,7 +35,7 @@ class CaminhoneiroController {
                 genero,
                 docCarro,
                 numViagens,
-                avaliacao,
+                avaliacao
             ) VALUES (?,?,?,?,?,?,?,?,?,?);    
         `;  
         const values = [
