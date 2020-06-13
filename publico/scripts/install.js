@@ -17,7 +17,7 @@ function installPWA(evt) {
     // Hide the install button, it can't be called twice.
     evt.target.classList.add('hidden');
     // CODELAB: Log user response to prompt.
-    if (deferredPrompt) {
+    if (deferredPrompt != null) {
         deferredInstallPrompt.userChoice
             .then((choice) => {
                 if (choice.outcome === 'accepted') {
