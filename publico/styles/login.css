@@ -111,3 +111,17 @@ img#logo {
     width: 127px;
     height: 127px;
 }
+
+div#links {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 87px 30px 87px;
+    padding: 0;
+}
+
+a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    justify-content: space-between;
+}
