@@ -16,15 +16,14 @@
     <body>
         <header>
             <div id="logo-circle">
-                <img src="../img/Logo192.png" alt="Logo do projeto caminhonagem" id="logo">
+                <img src="../img/Logo192.png" alt="Logo do FreteSeguro" id="logo">
             </div>
         </header>
 
         <div class="content">
-            <form action="/login" method="POST">
+            <form action="/login" method="POST" enctype="multipart/form-data">
                 <!--<label type="email" for="email">E-mail</label>-->
                 <input type="email" name="email" placeholder="Digite seu e-mail" required>
-
                 <!--<label for="password">Senha</label>-->
                 <input type="password" value="" name="password" placeholder="Digite a sua senha" required>
 
@@ -33,7 +32,7 @@
 
             <div id="links">
                 <a id="forgot-password">Esqueci minha senha</a>
-                <a id="register">É novo aqui? Registre-se!</a>
+                <a href="/registro" id="register">É novo aqui? Registre-se!</a>
             </div>
 
             <div id="google-login">

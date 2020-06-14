@@ -4,11 +4,13 @@ CREATE TABLE IF NOT EXISTS caminhoneiro (
     name        TEXT,
     email       TEXT, 
     rg          INTEGER,
-    idade       INTEGER,
+    dataNasc    INTEGER,
     genero      CHAR,
-    docCarro    TEXT,
+    docCarro    INTEGER,
     numViagens  INTEGER,
     avaliacao   INTEGER,
+    cnh         INTEGER,
+    phone       INTEGER,
     FOREIGN KEY(email) REFERENCES login(email),
     FOREIGN KEY(docCarro) REFERENCES caminhao(docCarro)
 );

@@ -4,9 +4,11 @@ INSERT INTO caminhoneiro (
     name,
     email,
     rg,
-    idade,
+    dataNasc,
     genero,
     docCarro,
     numViagens,
-    avaliacao
-) VALUES (?,?,?,?,?,?,?,?,?,?);    
+    avaliacao,
+    cnh,
+    phone
+) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);    

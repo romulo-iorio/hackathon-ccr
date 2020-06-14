@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+    <head>
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+        <meta name="description" content="Aplicativo para melhorar a qualidade de trabalho dos caminhoneiros">
+        <meta name="theme-color" content="#FFFFFF">
+        <title>FreteSeguro</title>
+        <link rel="shortcut icon" href="../img/LogoSVG.svg" />
+        <link rel="stylesheet" type="text/css" href="../styles/login.css" />
+        <link rel="manifest" href="../../manifest.json">
+        <link rel="apple-touch-icon" href="../img/LogoSVG.svg"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div id="logo-circle">
+                <img src="../img/Logo192.png" alt="Logo do FreteSeguro" id="logo">
+            </div>
+        </header>
+
+        <div class="content">
+            <form action="/registro" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Digite seu nome" required>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="password" value="" name="password" placeholder="Digite a sua senha" required>
+                <input type="password" value="" name="password-repeat" placeholder="Digite a mesma senha" required>
+                <input type="file" name="image" required>
+                <input type="tel" name="phone" id="phone" placeholder="Digite seu telefone" required>
+                <input type="number" name="cpf" id="cpf" placeholder="Digite seu CPF" required>
+                <input type="number" name="rg" id="rg" placeholder="Digite seu RG" required>
+                <input type="date" name="dataNasc" id="dataNasc" placeholder="Digite sua data de nascimento" required>
+                <input type="number" name="cnh" id="cnh" placeholder="Digite o número da sua CNH" required>
+                <input type="number" name="docCarro" id="docCarro" placeholder="Digite o documento do seu carro" required>
+                <input type="text" name="placa" id="placa" placeholder="Digite a placa do seu carro" required>
+                <input type="text" name="modelo" id="modelo" placeholder="Digite o nodelo do seu carro" required>
+                <input type="text" name="cor" id="cor" placeholder="Digite a cor do seu carro" required>
+                
+                <button id="send-form" type="submit">Entrar</button>
+            </form>
+
+            <div id="links">
+                <a id="forgot-password">Esqueci minha senha</a>
+                <a id="register">É novo aqui? Registre-se!</a>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Frete Seguro, 2020 © Todos os direitos reservados</p>
+        </footer>
+
+        <img id="driver" src="../img/driver3.png" alt="">
+
+        <img src="../img/background.png" alt="" id="background">
+    <script src="../scripts/registro.js"></script>
+</html>

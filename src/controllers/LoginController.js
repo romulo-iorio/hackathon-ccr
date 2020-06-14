@@ -16,7 +16,7 @@ class LoginController {
         req.body.image = `/uploads/${req.file.filename}`;
         const values = [
             req.body.email,
-            req.body.senha
+            req.body.password
         ];
         function afterInsertData(err) {
             if(err){

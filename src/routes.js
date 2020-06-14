@@ -56,6 +56,9 @@ loginController.createDb();
 routes.get('/', (req, res) => {
     return res.sendFile(path.resolve(__dirname + '/../publico/views/login.html'));
 });
+routes.get('/registro', (req, res) => {
+    return res.sendFile(path.resolve(__dirname + '/../publico/views/registro.html'));
+});
 routes.get('/manifest.json',(req, res) =>{
     return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
 });

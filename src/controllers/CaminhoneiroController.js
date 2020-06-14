@@ -22,11 +22,13 @@ class CaminhoneiroController {
             req.body.name,
             req.body.email,
             req.body.rg,
-            req.body.idade,
+            req.body.dataNasc,
             req.body.genero,
             req.body.docCarro,
             req.body.numViagens,
-            req.body.avaliacao
+            req.body.avaliacao,
+            req.body.cnh,
+            req.body.phone
         ];
         function afterInsertData(err) {
             if(err){
