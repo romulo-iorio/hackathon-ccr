@@ -42,9 +42,9 @@ imageLabel.addEventListener("mouseleave", () => {
     }
 });
 
-password = document.querySelector("input[id=password"]);
-passwordRepeat = document.querySelector("input[id=password-repeat"]);
-buttonSendForm = document.querySelector("button[id=send-form]")
+password = document.querySelector("input[id=password]");
+passwordRepeat = document.querySelector("input[id=password-repeat]");
+buttonSendForm = document.querySelector("button[id=send-form]");
 
 password.addEventListener("change", passwordValidation);
 passwordRepeat.addEventListener("change", passwordValidation);
