@@ -63,7 +63,7 @@ routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     caminhoneiroController.create;
     caminhaoController.create;
     loginController.create;
-    res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-conluido.html'));
+    res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
 routes.get('/manifest.json',(req, res) =>{
     return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
