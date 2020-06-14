@@ -69,6 +69,10 @@ button {
     background-color: #8C3718;
 }
 
+button:hover {
+    background-color: #8C3708;
+}
+
 footer p{
     font-family: 'Roboto', sans-serif;
     margin: 0px;
