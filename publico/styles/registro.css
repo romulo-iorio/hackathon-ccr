@@ -94,8 +94,10 @@ img#driver {
     height: 350px;
     width: 190px;
     position: fixed;
-    top: 292px;
-    left: 170px;
+    /* top: 292px;
+    left: 170px; */
+    bottom: 0px;
+    right: 0px;
     z-index: -1;
     opacity: 0.75;
 }
