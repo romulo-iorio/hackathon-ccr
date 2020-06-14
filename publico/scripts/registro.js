@@ -41,3 +41,18 @@ imageLabel.addEventListener("mouseleave", () => {
         imageShow.classList.add("hide");
     }
 });
+
+password = document.querySelector("input[id=password"]);
+passwordRepeat = document.querySelector("input[id=password-repeat"]);
+buttonSendForm = document.querySelector("button[id=send-form]")
+
+password.addEventListener("change", passwordValidation);
+passwordRepeat.addEventListener("change", passwordValidation);
+
+function passwordValidation(event) {
+    if(password.value == passwordRepeat.value){
+        buttonSendForm.disabled = false;
+    }else{
+        alert("As duas senhas não coincidem!")
+    }
+}

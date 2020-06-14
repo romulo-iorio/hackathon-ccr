@@ -209,7 +209,7 @@ form label[for = image] img {
 
 #image-modal img#image-sample {
     pointer-events: none;
-    border-radius: 8px;
+    border-radius: 30px;
     transition: 400ms;
     width: 200px;
     height: auto;
