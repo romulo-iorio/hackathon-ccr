@@ -65,10 +65,19 @@ routes.get('/registro', (req, res) => {
 });
 routes.get('/profile', (req, res) => {
     const login = loginController.show(req,res,'email',loggedInEmail);
-    const caminhoneiro = caminhoneiroController.show(req,res,'email'.loggedInEmail);
-    const caminhao = caminhaoController.show(req,res,'docCarro',caminhoneiro.docCarro);
+    
+    const caminhoneiro = null //caminhoneiroController.show(req,res,'email'.loggedInEmail);
+    const caminhao = null //caminhaoController.show(req,res,'docCarro',caminhoneiro.docCarro);
     
     return res.render(path.resolve(__dirname + '/../publico/views/profile.html'), { caminhoneiro, caminhao, login });
+});
+routes.get('/main-page', (req, res) => {
+    const login = loginController.show(req,res,'email',loggedInEmail);
+    
+    const caminhoneiro = null //caminhoneiroController.show(req,res,'email'.loggedInEmail);
+    const caminhao = null //caminhaoController.show(req,res,'docCarro',caminhoneiro.docCarro);
+    
+    return res.render(path.resolve(__dirname + '/../publico/views/main-page.html'), { caminhoneiro, caminhao, login });
 });
 routes.get('/cadastro-concluido', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
