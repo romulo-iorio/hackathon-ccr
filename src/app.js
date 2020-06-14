@@ -8,7 +8,7 @@ var port = 3000;
 
 var app = express();
 
-nunjucks.configure("public/views", {       //Utilizando template engine
+nunjucks.configure("publico/views", {       //Utilizando template engine
     express: app,
     noCache: true
 })
