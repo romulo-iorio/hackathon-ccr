@@ -60,9 +60,9 @@ routes.get('/registro', (req, res) => {
     return res.sendFile(path.resolve(__dirname + '/../publico/views/registro.html'));
 });
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
-    caminhoneiroController.create;
-    caminhaoController.create;
-    loginController.create;
+    caminhoneiroController.create(req,res);
+    caminhaoController.create(req,res);
+    loginController.create(req,res);
     res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
 routes.get('/manifest.json',(req, res) =>{
