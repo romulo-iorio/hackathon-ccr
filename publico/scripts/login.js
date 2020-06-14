@@ -1,7 +1,9 @@
-passwordInput = document.querySelector("input[name=password]");
-let passwordPosition = passwordInput.value.length - 1;
+password = document.querySelector("input[name=password]").value;
+let passwordPosition = password.length() - 1;
 
-function handleInputChange(){
-    console.log(passwordInput.value[passwordPosition]);
-    passwordInput.value[passwordPosition] = "*";
+password.addEventListener("change", hidePassword)
+
+function hidePassword(event){
+    console.log(password[passwordPosition]);
+    password[passwordPosition] = "*";
 };
