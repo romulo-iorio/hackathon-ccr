@@ -17,7 +17,7 @@ function imageLabelClick(){
     }
 }
 
-imageInput.addEventListener("click", () => {
+imageInput.addEventListener("input", () => {
     if(imageInput.value != 0){
         alert("Imagem registrada no formulário! Passe o mouse por cima do ícone para ver a imagem, ou clique novamente nele para fazer upload de uma nova imagem")
         imageIcon.src = "../img/checked.svg";
