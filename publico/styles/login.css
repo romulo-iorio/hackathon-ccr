@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
 div.content {
     display: flex;
     flex-direction: column;
@@ -146,4 +150,6 @@ div#google-login {
     margin: 0 auto 90px auto;   
     border-radius: 6px;
     background-color: white; 
+    align-items: center;
+    justify-content: center;
 }
