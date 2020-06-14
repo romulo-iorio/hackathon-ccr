@@ -11,5 +11,5 @@ function hidePassword(){
     console.log(password);
     console.log(passwordPosition);
     console.log(password[passwordPosition]);
-    passwordInput.value[passwordPosition] = "*";
+    event.target.value[passwordPosition] = "*";
 };
