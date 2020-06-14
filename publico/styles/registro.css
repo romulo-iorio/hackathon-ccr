@@ -211,7 +211,7 @@ form label[for = image] img {
     pointer-events: none;
     border-radius: 8px;
     transition: 400ms;
-    width: 400px;
+    width: 200px;
     height: auto;
 }
 
