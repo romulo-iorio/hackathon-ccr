@@ -16,7 +16,7 @@ const multerConfig = { //MULTER CONFIG: to get file photos to temp server storag
     storage: multer.diskStorage({
         //Setup where the user's file will go
         destination: function(req, file, next){
-            next(null, './public/uploads');
+            next(null, './publico/uploads');
         },   
         
         //Then give the file a unique name
