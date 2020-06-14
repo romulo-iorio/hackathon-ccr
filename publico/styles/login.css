@@ -77,13 +77,11 @@ button {
     background-color: #8C3718;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-}
-
 footer p{
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    color: white;
+    font-size: 12px;
 }
 
 img#background {
