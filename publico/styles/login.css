@@ -76,6 +76,7 @@ img#background {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 img#driver {
@@ -84,4 +85,6 @@ img#driver {
     position: absolute;
     top: 288px;
     left: 131px;
+    z-index: 0;
+    opacity: 0.25;
 }
