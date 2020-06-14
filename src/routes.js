@@ -59,10 +59,16 @@ routes.get('/', (req, res) => {
     const login = loginController.index(req,res);
     return res.render(path.resolve(__dirname + '/../publico/views/login.html'), { login });
 });
+
+routes.get('/services', (req, res) => {
+    return res.render(path.resolve(__dirname + '/../publico/views/services.html'));
+});
+
 routes.get('/registro', (req, res) => {
     const login = loginController.index(req,res);
     return res.render(path.resolve(__dirname + '/../publico/views/registro.html'), { login });
 });
+
 routes.get('/profile', (req, res) => {
     const login = loginController.show(req,res,'email',loggedInEmail);
     
@@ -71,6 +77,7 @@ routes.get('/profile', (req, res) => {
     
     return res.render(path.resolve(__dirname + '/../publico/views/profile.html'), { caminhoneiro, caminhao, login });
 });
+
 routes.get('/main-page', (req, res) => {
     const login = loginController.show(req,res,'email',loggedInEmail);
     
@@ -79,9 +86,11 @@ routes.get('/main-page', (req, res) => {
     
     return res.render(path.resolve(__dirname + '/../publico/views/main-page.html'), { caminhoneiro, caminhao, login });
 });
+
 routes.get('/cadastro-concluido', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
+
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     loggedInEmail = req.body.loggedInEmail
     caminhaoController.create(req,res);
@@ -89,11 +98,13 @@ routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     caminhoneiroController.create(req,res);
     res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
+
 routes.get('/manifest.json',(req, res) =>{
-    return res.render(path.resolve(__dirname + '/../manifest.json'));
+    return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
 });
+
 routes.get('/service-worker.js',(req, res) =>{
-    return res.render(path.resolve(__dirname + '/../publico/service-worker.js'));
+    return res.sendFile(path.resolve(__dirname + '/../publico/service-worker.js'));
 });
 
 //The 404 Route (ALWAYS Keep this as the last route)

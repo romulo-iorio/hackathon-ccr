@@ -1,0 +1,254 @@
+body {
+    background-color: #FFFFFF;
+    height: 97.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 100vw;
+    background-color: #0471B5;
+}
+
+header div.header-content {
+    margin: 0 15px;
+    display: flex;
+    flex: 1;
+}
+
+header div#photo-circle {
+    height: 82px;
+    width: 82px;
+    border-radius: 100px;
+    background-color: #F2F2F2;
+}
+
+header div#photo-circle img#photo{
+    height: 82px;
+    width: 82px;
+    border-radius: 100px;
+}
+
+header div#header-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 8px;
+    align-content: center;
+}
+
+header div#header-info h1{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 3px;
+}
+
+header div#header-info h2{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: auto;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    color:#65DBF5;
+    font-size: 12px;
+    flex: 1;
+    margin: 0px auto;
+    text-align: center;
+}
+
+div.content {
+    margin: 18px auto 85px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.cards {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 13px;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+}
+
+div.card {
+    width: 296px;
+    height: 106px; 
+    border: 2px solid #C4C4C4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card #card-up {
+    display: flex;
+    align-content: center;
+    width: 296px;
+    height: 66px;
+    margin: 0 0 0 24px;
+    padding: 0;
+}
+
+div#route {
+    height: auto;
+    width: auto;
+    margin-right: 35px;
+}
+
+div#div-time {
+    height: 18px;
+    width: 84px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+span#icon-time {
+    display: flex;
+    height: 18px;
+    width: 18px;
+    background-image: url("../img/clock.png");
+}
+
+p#time {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 0 0 3px;
+    color: #65DBF5;
+}
+
+
+.card div#route p {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 1px;
+}
+
+.card h6 {
+    margin-top: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.card #card-down {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    height: 40px;
+    width: 296px;
+    border: 2px solid #C4C4C4;
+    border-radius: 20px;
+    margin-bottom: -2px;
+    justify-content: center;
+}
+
+#card-down div#div-price {
+    background-color: #0477BF;
+    border-left: 2px solid #C4C4C4;
+    border-radius: 0 18px 18px 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    width: 105px;
+    margin: auto 2px auto auto;
+}
+
+span#icon-price {
+    background-image: url("../img/money.png");
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-self: center;
+    margin-left: 6px;
+}
+
+p#price {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#card-down div#div-weight {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    width: 90px;
+}
+
+span#icon-weight {
+    background-image: url("../img/icon-weight.png");
+    height: 18px;
+    width: 18px;
+    display: flex;
+    align-self: center;
+    margin-left: 8px;
+}
+
+p#weight {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin: auto;
+}
+
+#card-down div#div-price-per-km {
+    border-right: 2px solid #C4C4C4;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    width: 100px;
+    margin: auto;
+}
+
+span#icon-price-per-km {
+    background-image: url("../img/icon-rs-per-km.png");
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-self: center;
+    margin-right: 5px;
+}
+
+p#price-per-km {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+}

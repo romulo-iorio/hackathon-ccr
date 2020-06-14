@@ -9,46 +9,54 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 242px;
+    height: 160px;
     width: 100vw;
     background-color: #0471B5;
 }
 
+header div.header-content {
+    margin: 0 15px;
+    display: flex;
+    flex: 1;
+}
+
 header div#photo-circle {
-    height: 166px;
-    width: 166px;
+    height: 82px;
+    width: 82px;
     border-radius: 100px;
     background-color: #F2F2F2;
 }
 
 header div#photo-circle img#photo{
-    height: 166px;
-    width: 166px;
+    height: 82px;
+    width: 82px;
     border-radius: 100px;
 }
 
-header div#change-photo-circle {
+header div#header-info {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 48px;
-    width: 48px;
-    border-radius: 100px;
-    right: -110px;
-    top: -40px;
-    background-color: #8C3718;
+    flex-direction: column;
+    margin: auto auto auto 8px;
+    align-content: center;
 }
 
-header div#change-photo-circle img#change-photo {
-    width: 35px;
-    height: 35px;
+header div#header-info h1{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 3px;
 }
 
-div.content {
-    width: 260px;
-    margin: 48px auto 85px auto;
-    height: auto;
+header div#header-info h2{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -67,21 +75,40 @@ footer p{
     text-align: center;
 }
 
-h1 {
-    border-bottom: 1px solid #65DBF5;
-    font-family: 'Roboto', sans-serif;
-    color: #000000;
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: bold;
-    margin-bottom: 18px;
-    padding-left: 7px;
+div.content {
+    margin: 18px auto 85px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-label {
-    font-family: 'Roboto', sans-serif;
-    color:#65DBF5;
+div.cards {
+    display: grid;
+    row-gap: 9px;
+    column-gap: 13px;
+    grid-template-columns: 1fr 1fr;
+}
+
+div.card {
+    width: 134px;
+    height: 106px; 
+    border: 2px solid #C4C4C4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Remover ao pegar os ícones corretos*/
+div.card img {
+    width: 60px;
+    margin-top: 15px;
+}
+
+div.card label {
+    font-family: Roboto;
     font-size: 15px;
     line-height: 18px;
-    margin-bottom: 7px;
+    color: #C4C4C4;
 }
