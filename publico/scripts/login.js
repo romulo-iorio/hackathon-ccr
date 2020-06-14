@@ -4,7 +4,7 @@ passwordInput.addEventListener("change", hidePassword);
 
 function hidePassword(event){
     console.log("mudou!")
-    passwordText = event.target.innerText;
+    passwordText = event.target.value;
     passwordText = "";
     passwordText = "*";
 }
