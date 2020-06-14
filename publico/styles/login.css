@@ -70,10 +70,15 @@ footer p{
     margin: 0;
 }
 
-body {
-    background-image: url('../img/background.png');
+img#background {
+    width: 100vw;
+    height: 100vh;
 }
 
 img#driver {
-    
+    height: 424px;
+    width: 269px;
+    position: absolute;
+    top: 288px;
+    left: 131px;
 }
