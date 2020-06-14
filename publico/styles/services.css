@@ -76,7 +76,7 @@ footer p{
 }
 
 div.content {
-    margin: 18px auto 85px auto;
+    margin: 18px auto 18px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,4 +251,151 @@ p#price-per-km {
     font-size: 12px;
     line-height: 14px;
     color: #000000;
+}
+
+div.card-button button {
+    width: 216px;
+    height: 36px;
+    border-radius: 100px;
+    border: none;
+    background-color: #0477BF;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+div.card-button button:focus {
+    outline: none;
+    background-color: #04779F;
+}
+
+div.card-button button:hover {
+    background-color: #04779F;
+}
+
+div.dado {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+div.dado p {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 14px;
+    color: #000000;
+}
+
+div.dado h1 {
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 14px;
+    color: #000000;
+}
+
+#reservar-button {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0477BF;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 14px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    padding: 17px;
+    margin-top: 10px;
+}
+
+#reservar-button:focus {
+    outline: none;
+    background-color: #04779F;
+}
+
+#reservar-button:hover {
+    background-color: #04779F;
+}
+
+/* MODAL */
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+} 
+
+.modal {
+    background-color: white;
+    border-radius: 30px;
+    width: 60%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 40px;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+    font-size: 1.5rem;
+}
+
+.img-company {
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .8);
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
 }
