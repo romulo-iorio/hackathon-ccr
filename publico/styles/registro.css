@@ -161,18 +161,21 @@ form input#image {
 }
 
 form label[for=image] {
-    background: #F0F0F5;
+    background: #FFFFFF;
     border: 0;
     font-size: 16px;
     outline: none;
-    border-radius: 8px;
+    border-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     cursor: pointer;
     align-items: center;
     justify-content: center;
     display: flex;
     height: 32px;
-    width: 32px;
-    margin: auto;
+    width: 20%;
+    margin: auto auto 28px auto;
+    border-left: ridge;
 }
 
 form label[for = image] img {
@@ -217,5 +220,7 @@ div#name-image {
 }
 
 div#name-image input[type=text] {
-    width: 75%
+    width: 80%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
