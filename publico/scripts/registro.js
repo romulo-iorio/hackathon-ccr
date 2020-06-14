@@ -1,4 +1,4 @@
-onst imageInput = document.querySelector("input[name=image]");
+const imageInput = document.querySelector("input[name=image]");
 const imageLabel = document.querySelector("label[for=image]");
 const imageIcon  = document.getElementById("input-image-icon");
 const imageSample = document.getElementById("image-sample");

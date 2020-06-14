@@ -6,17 +6,18 @@ const preCacheUrls = [
     '/',
     // html file
     './views/login.html',
+    './views/registro.html',
     // css file
     './styles/login.css',
+    './styles/registro.css',
     // javascript filter
     './scripts/login.js',
+    './scripts/registro.js',
     './scripts/install.js',
     // manifest file
     './../manifest.json',
     // assets
-    //'./img/maps.svg',
-    //'./img/maps192.png',
-    //'./img/maps512.png',
+    './img/',
     // maps api
     //'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=AIzaSyB2twdyhbY-Am2MgyGkWBpHZnTktlw8PJs&callback=initMap',
 ];
