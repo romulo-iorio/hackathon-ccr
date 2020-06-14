@@ -152,6 +152,7 @@ div#google-login p {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #929292;
+    margin: auto;
 }
 
 div#google-login span {
@@ -159,5 +160,5 @@ div#google-login span {
     height: 23px;
     width: 23px;
     background-image: url('../img/google.svg');
-    margin: auto 12px;
+    margin: auto 8px;
 }
