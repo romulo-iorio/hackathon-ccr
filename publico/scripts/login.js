@@ -1,6 +1,7 @@
 passwordInput = document.querySelector("input[name=password]");
 
 passwordInput.addEventListener("change", event =>{
-    console.log(event.target.value.length())
-    event.target.value[length() - 1] = "*";
+    let passwordLength = event.target.value.length();
+    console.log(passwordLength);
+    event.target.value[passwordLength - 1] = "*";
 });
