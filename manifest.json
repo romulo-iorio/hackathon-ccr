@@ -4,12 +4,12 @@
     "description": "Aplicativo para melhorar a qualidade de trabalho dos caminhoneiros",
     "icons": [
         {
-            "src": "/img/LogoSVG.png",
+            "src": "/img/Logo192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/img/LogoSVG.png",
+            "src": "/img/Logo512.png",
             "type": "image/png",
             "sizes": "512x512"
         }
