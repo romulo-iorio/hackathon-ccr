@@ -8,7 +8,7 @@ let imageChosen = 0;
 imageLabel.addEventListener("click", imageLabelClick);
 
 function imageLabelClick(){
-    imageInput.click();
+    //imageInput.click();
     if(imageChosen){
         imageInput.value = "";
         imageIcon.src = "../img/camera.svg";
