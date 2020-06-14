@@ -1,5 +1,5 @@
 password = document.querySelector("input[name=password]").value;
-let passwordPosition = password.length() - 1;
+let passwordPosition = password.length - 1;
 
 password.addEventListener("change", hidePassword)
 
