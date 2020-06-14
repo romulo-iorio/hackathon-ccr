@@ -64,9 +64,9 @@ routes.get('/registro', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/registro.html'), { login });
 });
 routes.get('/profile', (req, res) => {
-    const login = loginController.show(req,res,email,loggedInEmail);
-    const caminhoneiro = caminhoneiroController.show(req,res,email.loggedInEmail);
-    const caminhao = caminhaoController.show(req,res,docCarro,caminhoneiro.docCarro);
+    const login = loginController.show(req,res,'email',loggedInEmail);
+    const caminhoneiro = caminhoneiroController.show(req,res,'email'.loggedInEmail);
+    const caminhao = caminhaoController.show(req,res,'docCarro',caminhoneiro.docCarro);
     
     return res.render(path.resolve(__dirname + '/../publico/views/profile.html'), { caminhoneiro, caminhao, login });
 });
