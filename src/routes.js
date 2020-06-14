@@ -54,28 +54,28 @@ loginController.createDb();
 
 //Configuração de rotas
 routes.get('/', (req, res) => {
-    return res.sendFile(path.resolve(__dirname + '/../publico/views/login.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/login.html'));
 });
 routes.get('/registro', (req, res) => {
-    return res.sendFile(path.resolve(__dirname + '/../publico/views/registro.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/registro.html'));
 });
 routes.get('/profile', (req, res) => {
-    return res.sendFile(path.resolve(__dirname + '/../publico/views/profile.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/profile.html'));
 });
 routes.get('/cadastro-concluido', (req, res) => {
-    return res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     caminhaoController.create(req,res);
     loginController.create(req,res);
     caminhoneiroController.create(req,res);
-    res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
+    res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
 routes.get('/manifest.json',(req, res) =>{
-    return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
+    return res.render(path.resolve(__dirname + '/../manifest.json'));
 });
 routes.get('/service-worker.js',(req, res) =>{
-    return res.sendFile(path.resolve(__dirname + '/../publico/service-worker.js'));
+    return res.render(path.resolve(__dirname + '/../publico/service-worker.js'));
 });
 
 //The 404 Route (ALWAYS Keep this as the last route)
