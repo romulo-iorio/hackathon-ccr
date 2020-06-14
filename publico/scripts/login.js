@@ -1,4 +1,4 @@
-const passwordInput = document.querySelector("input[name=password]").value;
+const passwordInput = document.querySelector("input[name=password]");
 let password = passwordInput.value;
 let passwordPosition = password.length - 1;
 
