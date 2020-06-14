@@ -6,5 +6,5 @@ let passwordPosition = password.length - 1;
 passwordInput.addEventListener("input", hidePassword);
 
 function hidePassword(){
-    passwordInput.value += "*";
+    passwordInput.value = "*";
 };
