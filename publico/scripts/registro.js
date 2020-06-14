@@ -50,9 +50,12 @@ password.addEventListener("change", passwordValidation);
 passwordRepeat.addEventListener("change", passwordValidation);
 
 function passwordValidation(event) {
-    if((passwordRepeat.value != "") && (password.value != "") && (password.value == passwordRepeat.value)){
-        buttonSendForm.disabled = false;
-    }else{
-        alert("As duas senhas não coincidem!");
+    if((passwordRepeat.value != "") && (password.value != "")) {
+        if((password.value == passwordRepeat.value)){
+            buttonSendForm.disabled = false;
+        }else{
+            alert("As duas senhas não coincidem!");
+            buttonSendForm.disabled = true;
+        }
     }
 }
