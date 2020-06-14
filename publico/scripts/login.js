@@ -4,5 +4,5 @@ passwordInput.addEventListener("keydown", hidePassword);
 
 function hidePassword(event){
     passwordInput.value += "*";
-    passwordInput.value -= event.key;
+    //passwordInput.value -= event.key;
 };
