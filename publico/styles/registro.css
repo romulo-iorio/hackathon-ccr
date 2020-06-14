@@ -158,7 +158,6 @@ div#google-login span {
 form input#image {
     visibility: hidden;
     display: none;
-    height: 32px;
 }
 
 form label[for=image] {
@@ -172,6 +171,7 @@ form label[for=image] {
     align-items: center;
     justify-content: center;
     display: flex;
+    height: 32px;
 }
 
 form label[for = image] img {
@@ -212,4 +212,5 @@ div#name-image {
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
+    width: 182px;
 }
