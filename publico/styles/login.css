@@ -51,6 +51,15 @@ input {
     border: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+    padding-left: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:hover {
+    background-color: #FFFFE0;
 }
 
 button {
@@ -58,17 +67,13 @@ button {
     height: 20px;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     align-items: center;
     justify-content: center;
     text-decoration-color: white;
     color: white;
     background-color: #8C3718;
-}
-
-button#forgot-password{
-    font-size: 12px;
 }
 
 p {
@@ -125,8 +130,7 @@ div#links {
 a {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    justify-content: space-between;
+    font-size: 15px;
 }
 
 div#links a + a{
