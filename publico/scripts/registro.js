@@ -37,6 +37,14 @@ imageLabel.addEventListener("mouseenter", () => {
     }
 });
 
+imageLabel.addEventListener("mousedown", () => {
+    if(imageChosen == 1){
+        imageShow.classList.remove("hide");
+    }else{
+        imageShow.classList.add("hide");
+    }
+});
+
 imageLabel.addEventListener("mouseleave", () => {
     if(imageChosen == 1){
         imageShow.classList.add("hide");
