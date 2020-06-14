@@ -1,24 +1,24 @@
 {
-    "short_name": "Caminhonagem",
-    "name": "Caminhonagem: Uma mudança na sua vida",
-    "description": "Site para melhorar a qualidade de vida dos caminhoneiros",
+    "short_name": "FreteSeguro",
+    "name": "FreteSeguro: Dirigindo você à sua oportunidade ideal",
+    "description": "Aplicativo para melhorar a qualidade de trabalho dos caminhoneiros",
     "icons": [
         {
-            "src": "/img/truck-192.png",
+            "src": "/img/LogoSVG.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/img/truck-512.png",
+            "src": "/img/LogoSVG.png",
             "type": "image/png",
             "sizes": "512x512"
         }
     ],
     "start_url": "/",
-    "background_color": "#FFFFFF",
+    "background_color": "#049dd9",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#FFFFFF",
+    "theme_color": "#049dd9",
     "shortcuts": [
     ]
 }

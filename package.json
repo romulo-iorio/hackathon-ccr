@@ -1,7 +1,7 @@
 {
-  "name": "caminhonagem",
+  "name": "FreteSeguro",
   "version": "1.0.0",
-  "description": "PWA para melhorar a qualidade de vida dos caminhoneiros",
+  "description": "Aplicativo para melhorar a qualidade de trabalho dos caminhoneiros",
   "author": "Rômulo Iorio",
   "main": "src/app.js",
   "scripts": {
