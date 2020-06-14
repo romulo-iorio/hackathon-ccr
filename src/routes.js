@@ -59,6 +59,9 @@ routes.get('/', (req, res) => {
 routes.get('/registro', (req, res) => {
     return res.sendFile(path.resolve(__dirname + '/../publico/views/registro.html'));
 });
+routes.get('/profile', (req, res) => {
+    return res.sendFile(path.resolve(__dirname + '/../publico/views/profile.html'));
+});
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     caminhoneiroController.create(req,res);
     caminhaoController.create(req,res);
