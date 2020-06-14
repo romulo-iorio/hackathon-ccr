@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS caminhoneiro (
     name        TEXT,
     email       TEXT, 
     rg          INTEGER,
-    dataNasc    INTEGER,
+    birthday    INTEGER,
     genero      CHAR,
     docCarro    INTEGER,
     numViagens  INTEGER,

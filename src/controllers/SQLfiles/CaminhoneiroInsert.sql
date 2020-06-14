@@ -4,7 +4,7 @@ INSERT INTO caminhoneiro (
     name,
     email,
     rg,
-    dataNasc,
+    birthday,
     genero,
     docCarro,
     numViagens,
