@@ -69,3 +69,11 @@ p {
 footer p{
     margin: 0;
 }
+
+body {
+    background-image: url('../img/background.png');
+}
+
+img#driver {
+    
+}
