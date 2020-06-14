@@ -56,9 +56,11 @@ loginController.createDb();
 
 //Configuração de rotas
 routes.get('/', (req, res) => {
+    const login = loginController.index(req,res);
     return res.render(path.resolve(__dirname + '/../publico/views/login.html'));
 });
 routes.get('/registro', (req, res) => {
+    const login = loginController.index(req,res);
     return res.render(path.resolve(__dirname + '/../publico/views/registro.html'));
 });
 routes.get('/profile', (req, res) => {
