@@ -62,6 +62,9 @@ routes.get('/registro', (req, res) => {
 routes.get('/profile', (req, res) => {
     return res.sendFile(path.resolve(__dirname + '/../publico/views/profile.html'));
 });
+routes.get('/cadastro-concluido', (req, res) => {
+    return res.sendFile(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
+});
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
     caminhaoController.create(req,res);
     loginController.create(req,res);
