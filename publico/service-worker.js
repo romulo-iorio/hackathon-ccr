@@ -1,4 +1,5 @@
-const preCache = 'caminhonagem-13/06-21:08';
+const dateNow = new Date();
+const preCache = `Cache ${dateNow}`;
 const runTime = 'runtime';
 
 const preCacheUrls = [
