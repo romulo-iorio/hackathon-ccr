@@ -1,12 +1,4 @@
-const passwordInput = document.querySelector("input[name=password]");
+form = document.querySelector('form');
+sendFormButton = document.querySelector("button[id=send-form]")
 
-// passwordInput.addEventListener("keydown", hidePassword);
-// passwordInput.addEventListener("keyup", hidePassword2);
-
-// function hidePassword(event){
-//     passwordInput.value += "*";
-// };
-
-// function hidePassword2(event){
-//     passwordInput.value -= event.key;;
-// };
+sendFormButton.addEventListener("click", form.submit());
