@@ -23,12 +23,14 @@
         <div class="content">
             <form action="/registro" method="POST" enctype="multipart/form-data">
                 
-                <input type="text" name="name" placeholder="Digite seu nome" required>
+                <div id="name-image">
+                    <input type="text" name="name" placeholder="Digite seu nome" required>
 
-                <label for="image">
-                    <img src="../img/camera.svg" id="input-image-icon" />
-                    <input id="image" type="file" name="image" accept="image/*" placeholder="" required>
-                </label>
+                    <label for="image">
+                        <img src="../img/camera.svg" id="input-image-icon" />
+                        <input id="image" type="file" name="image" accept="image/*" placeholder="" required>
+                    </label>                
+                </div>
 
                 <input type="email" name="email" placeholder="Digite seu e-mail" required>
                 <input minlength="8" type="password" value="" name="password" placeholder="Digite a sua senha" required>
