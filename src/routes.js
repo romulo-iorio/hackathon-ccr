@@ -57,11 +57,11 @@ loginController.createDb();
 //Configuração de rotas
 routes.get('/', (req, res) => {
     const login = loginController.index(req,res);
-    return res.render(path.resolve(__dirname + '/../publico/views/login.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/login.html'), { login });
 });
 routes.get('/registro', (req, res) => {
     const login = loginController.index(req,res);
-    return res.render(path.resolve(__dirname + '/../publico/views/registro.html'));
+    return res.render(path.resolve(__dirname + '/../publico/views/registro.html'), { login });
 });
 routes.get('/profile', (req, res) => {
     const login = loginController.show(req,res,email,loggedInEmail);
