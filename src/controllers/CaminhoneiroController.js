@@ -23,7 +23,7 @@ class CaminhoneiroController {
             req.body.email,
             req.body.rg,
             req.body.birthday,
-            req.body.genero,
+            req.body.gender,
             req.body.docCarro,
             req.body.numViagens,
             req.body.avaliacao,

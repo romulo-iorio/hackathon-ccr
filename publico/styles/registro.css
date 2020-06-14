@@ -35,7 +35,7 @@ header {
     text-align: center;
 }
 
-input {
+input,select {
     width: 182px;
     height: 32px;
     margin-bottom: 28px;
@@ -47,11 +47,11 @@ input {
     padding-left: 5px;
 }
 
-input:focus {
+input:hover,select:focus {
     outline: none;
 }
 
-input:hover {
+input:hover,select:hover {
     background-color: #FFFFF0;
 }
 

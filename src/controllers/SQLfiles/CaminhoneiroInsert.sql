@@ -5,7 +5,7 @@ INSERT INTO caminhoneiro (
     email,
     rg,
     birthday,
-    genero,
+    gender,
     docCarro,
     numViagens,
     avaliacao,
