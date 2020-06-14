@@ -1,6 +1,6 @@
 passwordInput = document.querySelector("input[name=password]");
 
-passwordInput.addEventListener("input", hidePassword);
+passwordInput.addEventListener("change", hidePassword);
 
 function hidePassword(event){
     console.log("mudou!")
