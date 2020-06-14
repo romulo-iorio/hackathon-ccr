@@ -131,7 +131,7 @@ div#links {
 a {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     text-decoration: underline;
 }
 
@@ -140,7 +140,7 @@ div#links a + a{
 }
 
 div#google-login {
-    width: 160px;
+    width: 170;
     height: 30px;
     display: flex;
     margin: 0 auto 90px auto;   
@@ -152,7 +152,7 @@ div#google-login {
 
 div#google-login p {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     color: #929292;
 }
 
@@ -161,4 +161,5 @@ div#google-login span {
     height: 23px;
     width: 23px;
     background-image: url('../img/google.svg');
+    margin: auto 12px;
 }
