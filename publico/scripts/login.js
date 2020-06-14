@@ -5,5 +5,5 @@ passwordInput = document.querySelector("input[name=password]");
 //     console.log(event.target.value[passwordLength - 1]);
 //     event.target.value[passwordLength - 1] = "*";
 // });
-let passwordLength = event.target.value.length;
-console.log(event.target.value[passwordLength - 1]);
+let passwordLength = passwordInput.value.length;
+console.log(passwordInput.value[passwordLength - 1]);
