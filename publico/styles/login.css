@@ -32,7 +32,7 @@ img#logo {
     width: 200px;
 }
 
-label {
+/* label {
     flex: 1;
     text-align: left;
     align-items: flex-start;
@@ -40,25 +40,28 @@ label {
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 0;
-}
+} */
 
 input {
-    width: 160px;
-    height: 30px;
-    margin-bottom: 15px;
-    border-radius: 6px;
+    width: 182px;
+    height: 32px;
+    margin-bottom: 28px;
+    border-radius: 50px;
+    background-color: white;
 }
 
 button {
-    width: 100px;
-    height: 25px;
-    margin: 15px;
-    border-radius: 6px;
+    width: 70px;
+    height: 20px;
+    border-radius: 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     align-items: center;
     justify-content: center;
+    text-decoration-color: white;
+    color: white;
+    background-color: #8C3718;
 }
 
 button#forgot-password{

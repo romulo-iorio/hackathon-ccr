@@ -16,23 +16,25 @@
     <body>
         <header>
             <div id="logo-circle">
-                <img src="../img/LogoSVG.svg" alt="Logo do projeto caminhonagem" id="logo">
+                <img src="../img/Logo192.png" alt="Logo do projeto caminhonagem" id="logo">
             </div>
         </header>
 
         <div class="content">
             <form action="/login" method="POST">
-                <label type="email" for="email">E-mail</label>
+                <!--<label type="email" for="email">E-mail</label>-->
                 <input type="text" name="email" placeholder="Digite seu e-mail" required>
 
-                <label for="password">Senha</label>
+                <!--<label for="password">Senha</label>-->
                 <input type="password" value="" name="password" placeholder="Digite a sua senha" required>
 
                 <button id="send-form" type="submit">Entrar</button>
             </form>
 
-            <a id="forgot-password">Esqueci minha senha</a>
-            <a id="register">Sou novo aqui. Fazer sign-in!</a>
+            <div id="links">
+                <a id="forgot-password">Esqueci minha senha</a>
+                <a id="register">Sou novo aqui. Fazer sign-in!</a>
+            </div>
 
             <div id="google-login">
                 <p>Entrar com o google</p>
