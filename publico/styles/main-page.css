@@ -112,3 +112,7 @@ div.card label {
     line-height: 18px;
     color: #C4C4C4;
 }
+
+a {
+    text-decoration: none;
+}
