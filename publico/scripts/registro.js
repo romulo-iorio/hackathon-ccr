@@ -50,7 +50,7 @@ password.addEventListener("change", passwordValidation);
 passwordRepeat.addEventListener("change", passwordValidation);
 
 function passwordValidation(event) {
-    if(password.value == passwordRepeat.value){
+    if((passwordRepeat.value != "") && (password.value != "") && (password.value == passwordRepeat.value)){
         buttonSendForm.disabled = false;
     }else{
         alert("As duas senhas não coincidem!");
