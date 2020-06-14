@@ -50,5 +50,20 @@ button {
     border-radius: 6px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+button#forgot-password{
+    font-size: 12px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+footer p{
+    margin: 0;
 }
