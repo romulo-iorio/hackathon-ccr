@@ -60,6 +60,10 @@ routes.get('/', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/login.html'), { login });
 });
 
+routes.get('/map', (req, res) => {
+    window.location = "http://maps.google.com/maps?daddr=lat,long&amp;ll=";
+});
+
 routes.get('/chat', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/chat.html'));
 });

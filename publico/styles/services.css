@@ -114,13 +114,12 @@ div.card {
 div#route {
     height: auto;
     width: auto;
-    margin-right: 35px;
 }
 
 div#div-time {
     height: 18px;
     width: 84px;
-    margin-top: 9px;
+    margin: 9px 30px 0px auto;
     display: flex;
     flex-direction: row;
     align-content: center;
