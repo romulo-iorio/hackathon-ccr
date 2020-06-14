@@ -3,8 +3,8 @@ passwordInput = document.querySelector("input[name=password]");
 passwordInput.addEventListener("change", hidePassword);
 
 function hidePassword(event){
-    console.log("mudou!")
-    const passwordText = event.target.value;
+    let passwordText = event.target.value;
+    console.log(passwordText)
     passwordText = "";
     passwordText = "*";
 }
