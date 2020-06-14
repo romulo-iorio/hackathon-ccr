@@ -115,8 +115,12 @@ routes.post('/change-photo', multer(multerConfig).single('image'), (req, res) =>
     res.render(path.resolve(__dirname + '/../publico/views/profile.html'));
 });
 
+routes.post('/main-page',(req, res) =>{
+    return res.render(path.resolve(__dirname + '/../manifest.json'));
+});
+
 routes.get('/manifest.json',(req, res) =>{
-    return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
+    return res.sendFile(path.resolve(__dirname + '/../publico/views/main-page.html'));
 });
 
 routes.get('/service-worker.js',(req, res) =>{
