@@ -15,7 +15,6 @@ class CaminhoneiroController {
     create(req, res) {
         //Prepara a referência ao diretório da imagem
         //req.body.image = path.resolve(__dirname, '..', '..', 'public', 'uploads', req.file.filename);
-        req.body.image = path.resolve(__dirname + `/../../publico/uploads/${req.file.filename}`);
         const values = [
             req.body.cpf,
             req.body.image,
@@ -55,7 +54,23 @@ class CaminhoneiroController {
     }
     show(req, res, searchParam, searchContent){
         //Pegar os dados do banco de dados de acordo com o filtro
-        db.all(`SELECT * FROM caminhoneiro WHERE '%${searchParam}%' LIKE '%${searchContent}%'`, function(err, rows){
+        db.all(`SELECT * 
+                FROM caminhoneiro 
+                WHERE '%${searchParam}%' 
+                LIKE '%${searchContent}%'
+            `, function(err, rows){
+            if(err){
+                return console.log(err);
+            }
+            console.log(rows);
+            return rows;
+        });
+    }
+    update(req, res, updateParam, updateContent, email){
+        db.all(`UPDATE  caminhoneiro
+                SET     '%${updateParam}%' = '%${updateContent}%'
+                WHERE   email = email;
+            `, function(err, rows){
             if(err){
                 return console.log(err);
             }

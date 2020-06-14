@@ -100,11 +100,19 @@ routes.get('/cadastro-concluido', (req, res) => {
 });
 
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
-    loggedInEmail = req.body.loggedInEmail
+    req.body.image = path.resolve(__dirname + `/../../publico/uploads/${req.file.filename}`);
+    loggedInEmail = req.body.email
     caminhaoController.create(req,res);
     loginController.create(req,res);
     caminhoneiroController.create(req,res);
     res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
+});
+
+routes.post('/change-photo', multer(multerConfig).single('image'), (req, res) => {
+    req.body.image = path.resolve(__dirname + `/../../publico/uploads/${req.file.filename}`);
+    caminhoneiroController.create(req,res,'image',req.body.image,loggedInEmail);
+    caminhoneiroController.show(req,res,'email', loggedInEmail)
+    res.render(path.resolve(__dirname + '/../publico/views/profile.html'));
 });
 
 routes.get('/manifest.json',(req, res) =>{

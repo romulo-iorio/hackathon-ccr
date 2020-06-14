@@ -85,3 +85,7 @@ label {
     line-height: 18px;
     margin-bottom: 7px;
 }
+
+img#change-photo {
+    pointer-events: none;
+}

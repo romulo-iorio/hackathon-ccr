@@ -20,6 +20,9 @@
                 <div id="change-photo-circle">
                     <img src="../img/cameraIcon.svg" alt="Ícone de câmera que permite mudar foto" id="change-photo">
                 </div>
+                <form action="/change-photo" method="POST" enctype="multipart/form-data" id = "changePhotoForm">
+                    <input type="file" name=image hidden>
+                </form>
             </div>
         </header>
 
