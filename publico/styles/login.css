@@ -28,8 +28,25 @@ img#logo {
     width: 200px;
 }
 
+label {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
 button {
     width: 100px;
     height: 25px;
     margin: 15px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+
+input {
+    width: 160px;
+    height: 30px;
+    margin: 30px;
+    border-radius: 6px;
 }

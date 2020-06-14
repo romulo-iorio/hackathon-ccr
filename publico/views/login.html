@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/login.css" />
         <link rel="manifest" href="../../manifest.json">
         <link rel="apple-touch-icon" href="../img/truck.svg"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -19,11 +20,11 @@
 
         <div class="content">
             <form action="/login" method="POST">
-                <label type="email" for="email" placeholder="Digite seu e-mail">E-mail</label>
-                <input type="text" name="email" required>
+                <label type="email" for="email">E-mail</label>
+                <input type="text" name="email" placeholder="Digite seu e-mail" required>
 
-                <label for="password" placeholder="Digite a sua senha">Senha</label>
-                <input type="text" name="password" required>
+                <label for="password">Senha</label>
+                <input type="text" name="password" placeholder="Digite a sua senha" required>
             </form>
 
             <button id="send-form">Entrar</button>
@@ -37,7 +38,7 @@
         </div>
 
         <footer>
-            <h1>Equipe Caminhonagem, 2020 © Todos os direitos reservados</h1>
+            <p>Equipe Caminhonagem, 2020 © Todos os direitos reservados</p>
         </footer>
     </body>     
     <script src="../scripts/login.js"></script>
