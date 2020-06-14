@@ -53,6 +53,6 @@ function passwordValidation(event) {
     if(password.value == passwordRepeat.value){
         buttonSendForm.disabled = false;
     }else{
-        alert("As duas senhas não coincidem!")
+        alert("As duas senhas não coincidem!");
     }
 }

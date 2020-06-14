@@ -63,7 +63,7 @@ routes.post('/create-point', multer(multerConfig).single('image'), () => {
     caminhoneiroController.create;
     caminhaoController.create;
     loginController.create;
-}));
+});
 routes.get('/manifest.json',(req, res) =>{
     return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
 });
