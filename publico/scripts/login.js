@@ -4,6 +4,8 @@ let passwordPosition = password.length() - 1;
 password.addEventListener("change", hidePassword)
 
 function hidePassword(event){
+    console.log(password);
+    console.log(passwordPosition);
     console.log(password[passwordPosition]);
     password[passwordPosition] = "*";
 };
