@@ -1,5 +1,6 @@
 * {
     z-index: 1;
+    box-sizing: border-box;
 }
 
 div.content {
@@ -59,7 +60,7 @@ input:focus {
 }
 
 input:hover {
-    background-color: #FFFFE0;
+    background-color: #FFFFF0;
 }
 
 button {
@@ -123,7 +124,7 @@ img#logo {
 div#links {
     display: flex;
     flex-direction: column;
-    margin: 20px 87px 30px 87px;
+    margin: 20px auto 30px 87px;
     padding: 0;
 }
 
@@ -131,8 +132,18 @@ a {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    text-decoration: underline;
 }
 
 div#links a + a{
     margin-top: 11px;
+}
+
+div#google-login {
+    width: 160px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto 130px auto;   
+    border-radius: 6px;
+    color: white; 
 }
