@@ -7,7 +7,7 @@
         <meta name="theme-color" content="#FFFFFF">
         <title>FreteSeguro</title>
         <link rel="shortcut icon" href="../img/LogoSVG.svg" />
-        <link rel="stylesheet" type="text/css" href="../styles/cadastro-concluido.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/profile.css" />
         <link rel="manifest" href="../../manifest.json">
         <link rel="apple-touch-icon" href="../img/LogoSVG.svg"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,14 +15,31 @@
 
     <body>
         <header>
-            <div id="logo-circle">
-                <img src="../img/Logo192.png" alt="Logo do FreteSeguro" id="logo">
+            <div id="photo-circle">
+                <img src={{ caminhoneiro.image }} alt="Foto do caminhoreiro atualmente logado" id="photo">
+                <div id="change-photo-circle">
+                    <img src= alt="../img/camera2.svg" Ícone de câmera que permite mudar foto" id="change-photo">
+                </div>
             </div>
         </header>
 
         <div class="content">
-            <h1>Ainda não há nada aqui :(</h1>
-            <h3>Página em construção</h3>
+            <div id="name-div">
+                <label for="name">Nome:</label>
+                <h1 name="name">{{ caminhoneiro.nome }}</h1>
+            </div>
+            <div id="age-div">
+                <label for="age">Idade:</label>
+                <h1 name="age">{{ caminhoneiro.nome }}</h1>
+            </div>
+            <div id="gender-div">
+                <label for="gender">Gênero:</label>
+                <h1 name="gender">{{ caminhoneiro.gender }}</h1>
+            </div>
+            <div id="phone-div">
+                <label for="phone"></label>
+                <h1 name=phone>{{ caminhoneiro.phone }}</h1>
+            </div>
         </div>
 
         <footer>

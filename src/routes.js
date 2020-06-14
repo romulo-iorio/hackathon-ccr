@@ -47,6 +47,8 @@ const multerConfig = { //MULTER CONFIG: to get file photos to temp server storag
 routes.use(bodyParser.urlencoded({extended:false})); //Habilitar o uso do req.body //handle body requests
 routes.use(bodyParser.json()); // let's make JSON work too!
 
+let loggedInEmail = "";
+
 //Inicialização do bancos de dados e criação das entidades, se ainda não tiverem sido criadas
 caminhaoController.createDb();
 caminhoneiroController.createDb();
@@ -60,12 +62,17 @@ routes.get('/registro', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/registro.html'));
 });
 routes.get('/profile', (req, res) => {
-    return res.render(path.resolve(__dirname + '/../publico/views/profile.html'));
+    const login = loginController.show(req,res,email,loggedInEmail);
+    const caminhoneiro = caminhoneiroController.show(req,res,email.loggedInEmail);
+    const caminhao = caminhaoController.show(req,res,docCarro,caminhoneiro.docCarro);
+    
+    return res.render(path.resolve(__dirname + '/../publico/views/profile.html'), { caminhoneiro, caminhao, login });
 });
 routes.get('/cadastro-concluido', (req, res) => {
     return res.render(path.resolve(__dirname + '/../publico/views/cadastro-concluido.html'));
 });
 routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
+    loggedInEmail = req.body.loggedInEmail
     caminhaoController.create(req,res);
     loginController.create(req,res);
     caminhoneiroController.create(req,res);
