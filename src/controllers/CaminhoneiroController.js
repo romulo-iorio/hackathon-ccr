@@ -15,7 +15,7 @@ class CaminhoneiroController {
     create(req, res) {
         //Prepara a referência ao diretório da imagem
         //req.body.image = path.resolve(__dirname, '..', '..', 'public', 'uploads', req.file.filename);
-        req.body.image = `/uploads/${req.file.filename}`;
+        req.body.image = path.resolve(__dirname + `/../../publico/uploads/${req.file.filename}`);
         const values = [
             req.body.cpf,
             req.body.image,
