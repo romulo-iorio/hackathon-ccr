@@ -7,6 +7,9 @@ body {
     height: 97.5vh;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 div.content {
@@ -27,8 +30,6 @@ header {
     justify-content: center;
     text-align: center;
 }
-
-
 
 footer p{
     font-family: 'Roboto', sans-serif;
@@ -70,4 +71,20 @@ div#logo-circle {
 img#logo {
     width: 127px;
     height: 127px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    color: white;
+    font-size: 15px;
+    text-align: center;
 }
