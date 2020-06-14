@@ -9,12 +9,15 @@ imageLabel.addEventListener("click", imageLabelClick);
 
 function imageLabelClick(){
     imageInput.click();
-    imageIcon.src = "../img/camera.svg";
-    imageLabel.style = "background: #F0F0F5";
-    imageChosen = 0;
+    if(imageChosen){
+        imageInput.value = "";
+        imageIcon.src = "../img/camera.svg";
+        imageLabel.style = "background: #F0F0F5";
+        imageChosen = 0;
+    }
 }
 
-imageInput.addEventListener("input", () => {
+imageInput.addEventListener("click", () => {
     if(imageInput.value != 0){
         alert("Imagem registrada no formulário! Passe o mouse por cima do ícone para ver a imagem, ou clique novamente nele para fazer upload de uma nova imagem")
         imageIcon.src = "../img/checked.svg";
