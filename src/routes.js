@@ -116,11 +116,11 @@ routes.post('/change-photo', multer(multerConfig).single('image'), (req, res) =>
 });
 
 routes.post('/main-page',(req, res) =>{
-    return res.render(path.resolve(__dirname + '/../manifest.json'));
+    return res.render(path.resolve(__dirname + '/../publico/views/main-page.html'));
 });
 
 routes.get('/manifest.json',(req, res) =>{
-    return res.sendFile(path.resolve(__dirname + '/../publico/views/main-page.html'));
+    return res.sendFile(path.resolve(__dirname + '/../manifest.json'));
 });
 
 routes.get('/service-worker.js',(req, res) =>{
