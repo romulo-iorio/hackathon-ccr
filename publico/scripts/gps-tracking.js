@@ -1,8 +1,8 @@
 let speed = GeolocationCoordinates.speed;
 let calculatedSpeed = 0
 
-let startGpsPos = navigator.geolocation.getCurrentPosition(pos => pos, err => console.log(err));
-let currentGpsPos = navigator.geolocation.getCurrentPosition(pos => pos, err => console.log(err));
+let startGpsPos = navigator.geolocation.getCurrentPosition(pos => pos, err => console.log(err), options);
+let currentGpsPos = navigator.geolocation.getCurrentPosition(pos => pos, err => console.log(err), options);
 let options = {};
 let currentTime = Date.now();
 let startTime = Date.now();
