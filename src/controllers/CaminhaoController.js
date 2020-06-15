@@ -44,7 +44,11 @@ class CaminhaoController {
     }
     show(req, res, searchParam, searchContent){
         //Pegar os dados do banco de dados de acordo com o filtro
-        db.all(`SELECT * FROM caminhao WHERE '%${searchParam}%' LIKE '%${searchContent}%'`, function(err, rows){
+        db.all(`SELECT * 
+                FROM caminhao 
+                WHERE ${searchParam} 
+                LIKE '%${searchContent}%'
+            `, function(err, rows){
             if(err){
                 return console.log(err);
             }

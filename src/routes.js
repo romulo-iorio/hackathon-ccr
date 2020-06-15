@@ -110,9 +110,9 @@ routes.post('/registro', multer(multerConfig).single('image'), (req, res) => {
 
 routes.post('/change-photo', multer(multerConfig).single('image'), (req, res) => {
     req.body.image = path.resolve(__dirname + `/../../publico/uploads/${req.file.filename}`);
-    caminhoneiroController.create(req,res,'image',req.body.image,loggedInEmail);
-    caminhoneiroController.show(req,res,'email', loggedInEmail)
-    res.render(path.resolve(__dirname + '/../publico/views/profile.html'));
+    caminhoneiroController.update(req,res,'image',req.body.image,loggedInEmail);
+    caminhoneiro = caminhoneiroController.show(req,res,'email', loggedInEmail)
+    res.render(path.resolve(__dirname + '/../publico/views/profile.html'), { caminhoneiro });
 });
 
 routes.post('/main-page',(req, res) =>{

@@ -1,3 +1,3 @@
 setTimeout(() => {
     window.location = "/profile";
-}, 3000);
+}, 1500);
