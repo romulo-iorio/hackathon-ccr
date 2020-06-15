@@ -127,6 +127,7 @@ routes.get('/service-worker.js',(req, res) =>{
     return res.sendFile(path.resolve(__dirname + '/../publico/service-worker.js'));
 });
 
+
 //The 404 Route (ALWAYS Keep this as the last route)
 //routes.get('*', (req, res) => {res.status(404).render('page-404.html');});
 //Exportação do arquivo para ser usado no server.js
