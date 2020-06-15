@@ -61,7 +61,7 @@ routes.get('/', (req, res) => {
 });
 
 routes.get('/map', (req, res) => {
-    window.location = "http://maps.google.com/maps?daddr=lat,long&amp;ll=";
+    window.location = "https://www.google.com/maps/";
 });
 
 routes.get('/chat', (req, res) => {
